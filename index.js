@@ -24,7 +24,7 @@ app.post('/form',(req,res) => {
     });
     
     console.log(mock_data);
-    res.send("data add");
+    res.send("Data inserted!");
 })
 
 // READ DATA
@@ -40,7 +40,7 @@ app.get('/get',(req,res) => {
     if (data) {
         res.send(`${data.id} ${data.type} ${data.amount}`);
     } else {
-        res.send('No data');
+        res.send('Not Found 404 T_T')
     }
 })
 
@@ -54,7 +54,6 @@ app.get('/delete',(req,res) => {
     });
     mock_data = data;
 
-    console.log(mock_data);
     res.send(mock_data);
 })
 
